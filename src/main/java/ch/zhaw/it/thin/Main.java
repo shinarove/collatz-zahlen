@@ -13,8 +13,10 @@ public class Main {
         do {
             CollatzSequenceBruteForce collatzSequenceBruteForce = new CollatzSequenceBruteForce();
             CollatzSequenceOptimised collatzSequenceOptimised = new CollatzSequenceOptimised();
+//            CollatzSequenceThreaded collatzSequenceThreaded = new CollatzSequenceThreaded();
             collatzSequenceBruteForce.runWith(upperBound);
             collatzSequenceOptimised.runWith(upperBound);
+//            collatzSequenceThreaded.runWith(upperBound);
             System.out.println("Enter another upper bound or 'q' to quit:");
             upperBound = readUpperBound();
         } while (upperBound != 0);

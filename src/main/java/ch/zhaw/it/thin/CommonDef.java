@@ -1,6 +1,7 @@
 package ch.zhaw.it.thin;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -31,6 +32,19 @@ public  abstract class CommonDef {
             if (collatzSequences.get(i) >= countElements) {
                 countElements = collatzSequences.get(i);
                 number = i + 1;
+            }
+        }
+        println("Smallest number with the most elements in the collatz sequence " + number);
+        println("Amount of elements: " + countElements);
+    }
+
+    protected  void findSmallestMax(Map<Long, Long> collatzSequences) {
+        long number = 0;
+        long countElements = 0;
+        for (Map.Entry<Long, Long> entry : collatzSequences.entrySet()) {
+            if (entry.getValue() >= countElements) {
+                countElements = entry.getValue();
+                number = entry.getKey();
             }
         }
         println("Smallest number with the most elements in the collatz sequence " + number);

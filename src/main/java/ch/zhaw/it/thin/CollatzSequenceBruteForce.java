@@ -7,6 +7,7 @@ public class CollatzSequenceBruteForce extends CommonDef {
 
     private final List<Integer> collatzSequences = new ArrayList<>();
 
+    @Override
     protected void runWith(long upperBound) {
         startTimer();
         long i = 1;
